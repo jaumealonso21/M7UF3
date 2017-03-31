@@ -1,0 +1,52 @@
+Esquelet dels fitxers amb el seu detall:
+
+php:
+//Pàgina principal de l'aplicatiu, menú de selecció consultar equips/àrbitres
+index.php -> equips.php o arbitres.php
+
+//Pàgines comunes a les vistes
+views/common/header.php ->inici de les pàgines amb links css i js
+views/common/footer.php ->final de les pàgines
+
+//Pàgines on es visualitzarà els resultats del punt 2.a i 2.b
+views/equips.php //Mostra tots els equips i selec. un equip
+views/jugadors.php //Mostra tots els jugadors de l'equip seleccionat i selec. un jugador
+views/detallsJugador.php //Mostra el detall de tots els minuts jugats(per partit) i gols marcats(per partit)
+
+//Pàgines on es visulitzarà els resultats del punt 2.c
+views/arbitres.php //Mostra tots els àrbitres i selec. un àrbitre
+views/partitsArbitre.php //Mostra el detall del nom estadi, data matx, equips i result. final de tots els partits arbitrats
+
+//Fitxer amb les dades de conexió a la BBDD
+model/conector.php
+
+//Fitxers amb funcions de cerca a la BBDD
+model/conEquips.php //require -> conector.php
+query01 = Cerca tots els equips
+query02 = Cerca tots els jugadors per equip seleccionat
+query03 = Cerca minuts jugats/partit, gols marcats/partit per jugador seleccionat ****Pendent de fer
+
+model/conArbitres.php //require -> conector.php
+query01 = Cerca tots els àrbitres
+query02 = Cerca nom estadi, data matx, equips i res.final/partits per àrbitre seleccionat
+
+
+//On s'ubicaran les funcions per mostrar els resultats a les vistes 
+control/mostrarEquips.php -> vistes: equips.php, jugadors.php i detallsJugador.php
+function totsEquips() -> Funció que crea la tabla de tots els equips
+function totsJugadors() -> Funció que crea la tabla de tots els jugadors per equip seleccionat
+function detallsJugador() -> Funció que crea la tabla de minuts jugats/partit, gols marcats/partit per jugador seleccionat
+
+control/mostrarArbitres.php -> vistes: arbitres.php i partitsArbitre.php
+function totsArbitres() -> Funció que crea la tabla de tots els àrbitres
+function detallsArbitre() -> Funció que crea la tabla de nom estadi, data matx, equips i res.final/partits per àrbitre seleccionat
+
+
+Full d'estils de l'aplicatiu
+css:
+css/pdo.css
+Dinamització de l'aplicatiu
+js:
+js/pdo.js
+
+
