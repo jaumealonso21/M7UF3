@@ -7,7 +7,6 @@
         <tr><td>Nom jugador</td><td>Minus jugats</td><td>Equip local</td><td>Equip visitant</td></tr>
     <?php detallsJugador(); ?>
     </table>
-    <?php detallsJugador(); ?>
 </div>
 
 <?php require("common/footer.php"); ?>

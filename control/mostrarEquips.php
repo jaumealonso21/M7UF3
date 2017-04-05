@@ -35,10 +35,10 @@ function detallsJugador() {
     // bucle per recuperar resultats
     while ($fila = $resultat03->fetch_assoc()) {
         // mostra el detall del jugador per files
-//        echo "<tr><td>".$fila['PLAY_Fullname']."</td><td>".$fila['MinutsJugats'].
-//                "</td><td>".$fila['Matc_Team_countrylocal']."</td><td>".
-//                $fila['Matc_Team_countryforeign']."</td></tr>";
-        //echo $fila['PLAY_Fullname'].$fila['MinutsJugats'].$fila['Matc_Team_countrylocal'].$fila['Matc_Team_countryforeign'];
+        echo "<tr><td>".$fila['PLAY_Fullname']."</td><td>".$fila['MinutsJugats'].
+                "</td><td>".$fila['Matc_Team_countrylocal']."</td><td>".
+                $fila['Matc_Team_countryforeign']."</td></tr>";
+//        echo $fila['PLAY_Fullname'].$fila['MinutsJugats'].$fila['Matc_Team_countrylocal'].$fila['Matc_Team_countryforeign'];
     }
     //Lliberar el conjunt de resultats
     $resultat03->free();

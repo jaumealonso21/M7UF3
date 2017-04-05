@@ -11,16 +11,11 @@ $query02 = "SELECT * FROM players WHERE PLAY_TEAM_Country = '".$mysqli->real_esc
 //Capturo la variable jugador enviat per mètode 'POST' provinent de jugadors
 $jugador = filter_input(INPUT_POST, 'nomJug', FILTER_SANITIZE_SPECIAL_CHARS);
 //Cerca minuts jugats/partit, gols marcats/partit per jugador seleccionat
-//$query03 = "SELECT PLAY_Fullname, (IFNULL(LNUP_MinuteOut,90) - LNUP_MinuteIn+1) AS MinutsJugats,
-//    Matc_Team_countrylocal,Matc_Team_countryforeign
-//    FROM players LEFT JOIN lineups ON LNUP_PLAY_ID = PLAY_ID
-//    	LEFT JOIN matches on MATC_ID=LNUP_MATC_ID
-//    WHERE PLAY_ID = '".$mysqli->real_escape_string($jugador)."'";
 $query03 = "SELECT PLAY_Fullname, (IFNULL(LNUP_MinuteOut,90) - LNUP_MinuteIn+1) AS MinutsJugats,
     Matc_Team_countrylocal,Matc_Team_countryforeign
     FROM players LEFT JOIN lineups ON LNUP_PLAY_ID = PLAY_ID
     	LEFT JOIN matches on MATC_ID=LNUP_MATC_ID
-    WHERE PLAY_ID = 35";
+    WHERE PLAY_ID = '".$mysqli->real_escape_string($jugador)."'";
 try {
     //$url= $_SERVER["REQUEST_URI"];
     $url = filter_input(INPUT_SERVER, "REQUEST_URI");
@@ -35,7 +30,7 @@ try {
             break;
         case "/M7UF3/views/detallsJugador.php":
             $resultat03 = $mysqli->query($query03);
-            //echo($jugador);
+            echo($jugador);
             break;
     }
 }
