@@ -30,7 +30,7 @@ try {
             break;
         case "/M7UF3/views/detallsJugador.php":
             $resultat03 = $mysqli->query($query03);
-            echo($jugador);
+            //echo($jugador);
             break;
     }
 }
