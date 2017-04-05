@@ -13,4 +13,3 @@
 </div>
 
 <?php require("common/footer.php"); ?>
-

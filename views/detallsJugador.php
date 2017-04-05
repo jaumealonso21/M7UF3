@@ -1,8 +1,13 @@
-<?php
+<?php require("common/header.php"); ?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+<?php require'../control/mostrarEquips.php'; ?>
+<div>
+    <p>Detalls del jugador:</p>
+    <table border="1">
+        <tr><td>Nom jugador</td><td>Minus jugats</td><td>Equip local</td><td>Equip visitant</td></tr>
+    <?php detallsJugador(); ?>
+    </table>
+    <?php detallsJugador(); ?>
+</div>
 
+<?php require("common/footer.php"); ?>
